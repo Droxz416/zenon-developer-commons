@@ -63,6 +63,9 @@ It’s simply an open research space for technical thinkers who want to explore 
 
 This repository will host structured documents and discussions around topics such as:
 
+### Featured Research
+- [Browser-Native Light Client Hypothesis](docs/research/browser-thesis.md)
+
 Architecture
 
 NoM design overview
