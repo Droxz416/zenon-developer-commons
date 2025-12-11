@@ -65,7 +65,6 @@ Thus, a verifier only needs:
 Merkle subtrees are unnecessary.
 Frontier validation replaces membership proofs.
 
-⸻
 
 4. Light-Client Workflow
 
