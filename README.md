@@ -10,9 +10,12 @@ architecture of **Zenon — The Network of Momentum (NoM)**.
 [![Light Client](https://img.shields.io/badge/Topic-Browser--Light--Client-orange)]()
 [![License: MIT](https://img.shields.io/badge/License-MIT-lightgrey.svg)]()
 
-***The full, structured Zenon architecture documentation is available here:
+**The full, structured Zenon architecture documentation is available here:**  
 👉 https://zenon-developer-commons.gitbook.io/zenon-developer-commons-docs
 
+---
+
+## What This Repository Is
 
 This repository serves as:
 
@@ -29,7 +32,7 @@ The goal is simple:
 
 ---
 
-# ░░ Why This Repository Exists ░░
+## ░░ Why This Repository Exists ░░
 
 Zenon is an unconventional architecture combining:
 
@@ -50,7 +53,7 @@ This repository provides a structured place to collect, clarify, and refine that
 
 ---
 
-# ░░ What This Repository Is *Not* ░░
+## ░░ What This Repository Is *Not* ░░
 
 It is **not**:
 
@@ -64,7 +67,7 @@ It *is* an **open research space** for technical thinkers who want to explore ho
 
 ---
 
-# ░░ Who This Is For ░░
+## ░░ Who This Is For ░░
 
 This repository is intended for:
 
@@ -73,18 +76,26 @@ This repository is intended for:
 - blockchain architecture enthusiasts  
 - P2P networking developers  
 - cryptography and SPV-proof engineers  
-- browser/WebRTC/libp2p developers  
+- browser / WebRTC / libp2p developers  
 - Zenon ecosystem contributors  
 - curious readers with technical interest  
 
-You *do not* need to be an expert to participate.
+You **do not** need to be an expert to participate.
 
 ---
 
-# ░░ Initial Research Areas ░░
+## ░░ Initial Research Areas ░░
 
 ### **Featured Research**
 - [Browser-Native Light Client Overview](docs/research/browser-light-client-overview.md)
+
+---
+
+### **External Fact Verification (Exploratory)**
+
+- Bitcoin SPV feasibility within Zenon’s ledger model  
+- Verifying external consensus facts without executing foreign state machines  
+- Unilateral, proof-based observation (not bridges or asset custody)
 
 ---
 
@@ -115,7 +126,7 @@ You *do not* need to be an expert to participate.
 
 ---
 
-# ░░ How to Contribute ░░
+## ░░ How to Contribute ░░
 
 Contributions of all kinds are welcome — including beginners.
 
@@ -138,7 +149,7 @@ This is a place for **collaboration**, not confrontation.
 
 ---
 
-# ░░ Key Documents ░░
+## ░░ Key Documents ░░
 
 - [Browser-Native Light Client Overview](docs/research/browser-light-client-overview.md)  
 - [Open Research Questions](docs/research/open-research-questions.md)  
@@ -155,80 +166,91 @@ transport layers.
 
 ### Zenon-Specific Resources
 
-- **Zenon Docs (Community Snapshot)**
+- **Zenon Docs (Community Snapshot)**  
   Concepts such as momentums, account-chains, ACIs, plasma, and fusion.  
   (Use the most recent community-maintained sources.)
 
-- **Zenon GitHub Organization**
+- **Zenon GitHub Organization**  
   Review the C++ and Go repositories for architecture hints.
+
+---
 
 ### Browser & Light Client Technologies
 
-- **Nakamoto SPV — Bitcoin Whitepaper (Section 8)**
+- **Nakamoto SPV — Bitcoin Whitepaper (Section 8)**  
   Foundational model for lightweight verification without full nodes.
 
-- **BIP-157/158 — Neutrino**
+- **BIP-157/158 — Neutrino**  
   Modern SPV protocol design using compact filters.
 
-- **WebRTC DataChannel Overview (MDN)**
+- **WebRTC DataChannel Overview (MDN)**  
   Understanding browser-native peer-to-peer communication.
 
-- **libp2p Documentation**
+- **libp2p Documentation**  
   Modular networking stack used by IPFS, Filecoin, and other decentralized systems.
 
-- **libp2p WebRTC Transport Specification**
+- **libp2p WebRTC Transport Specification**  
   How P2P connectivity can be achieved from inside the browser.
 
-- **IndexedDB (MDN)**
+- **IndexedDB (MDN)**  
   Browser storage options for headers, proofs, and local partial state.
+
+---
 
 ### Deterministic Execution & VM-Free Design
 
-- **Deterministic State Machines in Distributed Systems**
+- **Deterministic State Machines in Distributed Systems**  
   Useful background for understanding Zenon’s ACI design.
 
-- **Optimistic Rollup Architecture (High-Level)**
-  Not directly related to Zenon, but useful for understanding the idea of off-chain execution with on-chain verification.
+- **Optimistic Rollup Architecture (High-Level)**  
+  Not directly related to Zenon, but useful for understanding off-chain execution with on-chain verification.
 
-- **Merkle Trees & Proof Systems**
+- **Merkle Trees & Proof Systems**  
   Practical knowledge for proof-serving, account block inclusion, and SPV mechanics.
+
+---
 
 ### P2P & Networking Theory
 
-- **Kademlia DHT**
+- **Kademlia DHT**  
   Foundational theory for peer discovery in decentralized networks.
 
-- **libp2p Peer Routing & Discovery Modules**
+- **libp2p Peer Routing & Discovery Modules**  
   Helps understand how browser peers might discover full nodes or Sentries.
 
-- **NAT Traversal & STUN/TURN Basics**
+- **NAT Traversal & STUN/TURN Basics**  
   Required background for WebRTC-based node connections.
+
+---
 
 ### Blockchain Architecture References
 
-- **Avalanche — Snowcone Light Client Paper**
+- **Avalanche — Snowcone Light Client Paper**  
   Modern example of proof-efficient light clients.
 
-- **Zcash Halo 2 Overview (Optional)**
-  Advanced topic, but useful for understanding recursive proof systems.
+- **Zcash Halo 2 Overview (Optional)**  
+  Advanced topic; useful for understanding recursive proof systems.
 
-- **Tendermint Light Client Spec**
+- **Tendermint Light Client Spec**  
   Example of deterministic header verification logic.
+
+---
 
 ### Optional Deeper Background
 
-- **Google QUIC + WebTransport Overview**
-  Not required for Zenon, but helpful for thinking about future browser-native transports.
+- **Google QUIC + WebTransport Overview**  
+  Helpful for thinking about future browser-native transports.
 
-- **Ethereum Stateless Client Research**
+- **Ethereum Stateless Client Research**  
   Explores how minimal data structures enable ultra-light clients.
 
 ---
 
-These materials are not required knowledge but can be extremely helpful for anyone
-exploring Zenon’s architectural possibilities or contributing new research.
+These materials are not required knowledge, but they can be extremely helpful for
+anyone exploring Zenon’s architectural possibilities or contributing new research.
 
-# ░░ License ░░
+---
+
+## ░░ License ░░
 
 MIT License — open to anyone who wants to learn or build.
-
