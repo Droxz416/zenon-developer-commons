@@ -3,8 +3,8 @@ Bounded Verification Architecture
 Scope, Guarantees, and Non-Guarantees
 
 Status: Boundary specification
-Purpose: Define the exact guarantees, assumptions, and exclusion boundaries of the bounded verification architecture composed of bounded inclusion and minimal state frontier verification.
-Non-goal: This document does not propose a protocol, implementation, or deployment roadmap.
+Purpose: Precisely define the guarantees, assumptions, and impossibility boundaries of the bounded verification architecture.
+Non-Goal: This document does not propose a protocol, implementation, deployment plan, or roadmap.
 
 ⸻
 
@@ -12,33 +12,31 @@ Non-goal: This document does not propose a protocol, implementation, or deployme
 
 The bounded verification architecture consists of two orthogonal mechanisms:
 	1.	Bounded Inclusion (Spatial Verification)
-Verifies local state consistency against header-committed state roots without transaction enumeration.
+Verifies local state consistency against header-committed state roots without enumerating transactions.
 	2.	Minimal State Frontier Verification (Temporal Verification)
-Ensures that proofs accepted by a single verifier are temporally coherent within a bounded retention window.
+Ensures that proofs accepted by a single verifier remain temporally coherent within a bounded retention window.
 
-These components are independent but composable. Neither component alone provides sufficient guarantees for general-purpose verification.
+These components are independent but composable.
+Neither component alone provides sufficient guarantees for general-purpose verification.
 
 ⸻
 
 2. Explicit Guarantees
 
-When all stated assumptions hold, the architecture guarantees the following and only the following properties:
+When all stated assumptions hold, the architecture guarantees only the following properties:
 
 G1 — Local State Consistency
-
-For tracked state elements, accepted proofs are cryptographically consistent with the committed state root referenced in the corresponding header.
+For tracked state elements, accepted proofs are cryptographically consistent with the state root committed in the referenced header.
 
 G2 — Intra-Verifier Temporal Coherence
-
 For a single verifier, all proofs accepted within a retention window k reference commitments on a single, cryptographically linked commitment chain.
 
 G3 — Bounded Resource Usage
-
 Verifier storage and computation are bounded by:
 	•	O(k) retained headers
-	•	O(a · log |S|) proof data, where a is the number of tracked state elements
+	•	O(a \cdot \log |S|) proof data, where a is the number of tracked state elements
 
-No guarantee is provided outside these bounds.
+No guarantees are provided outside these bounds.
 
 ⸻
 
@@ -47,36 +45,30 @@ No guarantee is provided outside these bounds.
 The architecture cannot guarantee the following properties under any configuration:
 
 NG1 — Global State Validity
-
 Invalid state transitions affecting untracked state cannot be detected.
 
 NG2 — Transaction Identity
-
 The execution of a specific transaction (by hash, signature, or ordering) cannot be proven. Only effect equivalence is verifiable.
 
 NG3 — Censorship Detection
-
-The architecture cannot detect withheld transactions, withheld proofs, or selective proof availability.
+Withheld transactions, withheld proofs, or selective proof availability cannot be detected.
 
 NG4 — Cross-Verifier Agreement
-
 Independent verifiers may accept mutually inconsistent proofs without violating the model.
 
 NG5 — Historical Finality
-
 Proofs referencing commitments outside the retention window k cannot be verified for consistency with prior verifier state.
 
 NG6 — Canonical Chain Determination
+The architecture cannot determine which fork represents the globally canonical history.
 
-The architecture cannot determine which fork represents the canonical or globally correct history.
-
-These limitations are fundamental and not implementation artifacts.
+These limitations are fundamental, not implementation artifacts.
 
 ⸻
 
 4. Required Assumptions
 
-The guarantees in Section 2 hold only if all assumptions below are satisfied.
+All guarantees in Section 2 hold only if every assumption below is satisfied.
 
 Cryptographic Assumptions
 	•	Collision-resistant state commitment function
@@ -86,7 +78,7 @@ Cryptographic Assumptions
 System Assumptions
 	•	Deterministic execution with canonical ordering
 	•	Honest validator supermajority for global invariants
-	•	Header and proof data availability
+	•	Availability of header and proof data
 	•	Eventual network delivery (liveness)
 
 Operational Assumptions
@@ -100,11 +92,11 @@ Violation of any assumption invalidates the guarantees.
 
 5. Permitted Deployment Classes
 
-The architecture is suitable only for applications that require:
+This architecture is suitable only for applications that tolerate:
 	•	Local state queries (e.g., balances, contract state)
 	•	Best-effort verification under bounded resources
 	•	Single-verifier operation
-	•	Tolerance for weak inclusion (effect equivalence)
+	•	Weak inclusion (effect equivalence)
 	•	External handling of censorship, finality, and coordination
 
 Examples include read-only wallets, monitoring tools, resource-constrained clients, and advisory state queries.
@@ -113,12 +105,12 @@ Examples include read-only wallets, monitoring tools, resource-constrained clien
 
 6. Prohibited Deployment Classes
 
-The architecture must not be used for applications requiring:
+This architecture must not be used for applications requiring:
 	•	Proof of specific transaction execution
 	•	Financial safety dependent on canonical history
 	•	Multi-party or multi-verifier agreement
 	•	Censorship resistance as a security property
-	•	Global state invariants without trusted enforcement
+	•	Enforcement of global state invariants without trusted mechanisms
 
 Examples include bridges, exchanges, voting systems, notarization, and consensus-critical protocols.
 
