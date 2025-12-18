@@ -6,11 +6,22 @@ Research here is exploratory, not authoritative. The goal is curiosity and clari
 
 ---
 
+## Bounded Verification Series (Read in Order)
+
+A structured research series exploring verification primitives for the Zenon Network of Momentum.
+
+- [1. Header-Only Verification](header-only-verification-research.md)
+- [1a. Header-Only Verification — Hostile Review](header-only-verification-hostile-review.md)
+- [2. Bounded Inclusion](bounded_inclusion_without_merkle_README.md)
+- [2a. Bounded Inclusion — Hostile Review](bounded-inclusion-hostile-review.md)
+- [3. Minimal State Frontier Verification](minimal-state-frontier-verification.md)
+- [3a. Minimal State Frontier — Hostile Review](minimal-state-frontier-hostile-review.md)
+
+---
+
 ## Light Client Research
 
 - [Browser-Native Light Client Overview](browser-light-client-overview.md)
-- [Header-Only Verification Research](header-only-verification-research.md)
-- [Header-Only Verification Hostile Review](header-only-verification-hostile-review.md)
 
 ---
 

@@ -2,16 +2,6 @@
 
 This paper defines a bounded verification primitive for verifying local state against header-committed state roots.
 
-## Scope Clarification
-
-This paper does NOT propose:
-- a consensus protocol
-- a general-purpose light client
-- global state verification
-- canonical chain determination
-
-The guarantees and non-guarantees are intentional and fundamental to the model.
-
 ## Download
 
 <a href="bounded_inclusion_without_merkle_final.pdf" target="_blank">Download the full research paper (PDF)</a>
