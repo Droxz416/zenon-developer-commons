@@ -1,101 +1,101 @@
-Note: HTLCs, PTLCs, and Bounded Inclusion
+# HTLCs, PTLCs, and Bounded Inclusion
 
-This note is informal and intended to build intuition. It does not introduce new protocol behavior.
+Research Note — Intuition Building
 
-Also,
+This note is informal and intended to build intuition. It does not introduce new protocol behavior. It clarifies how familiar primitives like HTLCs and PTLCs relate to the bounded inclusion model discussed in this repository.
 
-This note is intended to clarify how familiar primitives like HTLCs and PTLCs relate to the bounded inclusion model discussed in this repository.
+---
 
-The short version
+## The Short Version
 
 HTLCs and PTLCs are narrow, purpose-built instances of the same underlying idea that bounded inclusion generalizes:
 
-Accept a state transition if—and only if—a small, verifiable condition is satisfied, without re-executing global state.
+> Accept a state transition if—and only if—a small, verifiable condition is satisfied, without re-executing global state.
 
 They do not require global transaction replay, full ledger knowledge, or general-purpose execution.
 
-⸻
+---
 
-What HTLCs / PTLCs actually do
+## What HTLCs / PTLCs Actually Do
 
 An HTLC or PTLC enforces a condition of the form:
 
-“This output is spendable if a specific cryptographic predicate is satisfied.”
+> "This output is spendable if a specific cryptographic predicate is satisfied."
 
-Examples:
+**Examples:**
 
-	•	HTLC: reveal a preimage before a timeout
-	•	PTLC: satisfy a discrete-log–based condition
+- HTLC: reveal a preimage before a timeout
+- PTLC: satisfy a discrete-log–based condition
 
-Crucially:
+**Crucially:**
 
-	•	The verifier does not re-execute prior transactions
-	•	The verifier does not care about transaction ordering beyond the referenced output
-	•	The verifier checks only a small proof against a committed state
+- The verifier does not re-execute prior transactions
+- The verifier does not care about transaction ordering beyond the referenced output
+- The verifier checks only a small proof against a committed state
 
 This is already bounded verification.
 
-⸻
+---
 
-What bounded inclusion generalizes
+## What Bounded Inclusion Generalizes
 
 Bounded inclusion takes the same verification pattern and removes the hard-coded use case.
 
-Instead of:
+**Instead of:**
 
-	•	“Is this hash preimage valid?”
-	•	“Does this signature satisfy this script?”
+- "Is this hash preimage valid?"
+- "Does this signature satisfy this script?"
 
-It asks:
+**It asks:**
 
-	•	“Is this local state consistent with a header-committed state root?”
+- "Is this local state consistent with a header-committed state root?"
 
-Formally:
+**Formally:**
 
-	•	HTLCs/PTLCs verify one specific state predicate
-	•	Bounded inclusion verifies arbitrary local state predicates, as long as they are committed in the state root
+- HTLCs/PTLCs verify one specific state predicate
+- Bounded inclusion verifies arbitrary local state predicates, as long as they are committed in the state root
 
-Both:
+**Both:**
 
-	•	Avoid global execution
-	•	Rely on cryptographic commitments
-	•	Trade completeness for verifiability under tight resource bounds
+- Avoid global execution
+- Rely on cryptographic commitments
+- Trade completeness for verifiability under tight resource bounds
 
-⸻
+---
 
-Why this distinction matters
+## Why This Distinction Matters
 
 HTLCs and PTLCs are usually viewed as features or contracts.
 
 Bounded inclusion is a verification primitive.
 
-That means:
+**That means:**
 
-	•	HTLCs/PTLCs can be seen as special cases inside the bounded inclusion envelope
-	•	Bounded inclusion is not proposing new trust assumptions
-	•	It is naming and formalizing a pattern already used successfully in limited contexts
+- HTLCs/PTLCs can be seen as special cases inside the bounded inclusion envelope
+- Bounded inclusion is not proposing new trust assumptions
+- It is naming and formalizing a pattern already used successfully in limited contexts
 
-⸻
+---
 
-What bounded inclusion does not claim
+## What Bounded Inclusion Does Not Claim
 
 This model does not claim:
 
-	•	Full transaction traceability
-	•	Canonical chain detection
-	•	Global consensus safety
-	•	Censorship resistance
+- Full transaction traceability
+- Canonical chain detection
+- Global consensus safety
+- Censorship resistance
 
 Those limits are explicit and intentional.
 
 HTLCs/PTLCs succeed precisely because they operate within similar constraints.
 
-⸻
+---
 
-Summary
+## Summary
 
 If HTLCs and PTLCs are acceptable, safe, and useful primitives, then bounded inclusion should be understood as:
 
-The same idea, made explicit, generalized, and applicable to browser-scale verification of local state.
+> The same idea, made explicit, generalized, and applicable to browser-scale verification of local state.
 
 Nothing more—and nothing less.

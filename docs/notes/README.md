@@ -33,6 +33,7 @@ These are exploratory research documents, not protocol specifications.
 - [Sentinel Middle Layer](sentinel-middle-layer.md)
 - [SPV Light Verification](spv-light-verification.md)
 - [Bitcoin SPV Feasibility](bitcoin-spv-feasibility.md)
+- [HTLCs, PTLCs, and Bounded Inclusion](htlc_ptlc_and_bounded_inclusion_comparison.md)
 
 ---
 
