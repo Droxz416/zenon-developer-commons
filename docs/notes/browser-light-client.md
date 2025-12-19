@@ -11,7 +11,7 @@ Some parts of the Zenon design line up well with modern browsers:
 - micro-PoW instead of gas
 - simple header verification
 
-Modern browsers can handle WASM, WebCrypto, and P2P transports.
+Modern browsers can handle WASM and P2P transports.
 
 ## What a minimal client would do
 

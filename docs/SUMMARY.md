@@ -8,14 +8,14 @@
 
 ## Notes (Draft Research & Working Documents)
 - [Notes Index](notes/README.md)
-- Node Architecture
-  - [Pillars](notes/pillars.md)
-  - [Sentinel Finalization Layer](notes/sentinel-finalization-layer.md)
-  - [Sentinel Middle Layer](notes/sentinel-middle-layer.md)
-  - [Supervisor Layer](notes/supervisor-layer.md)
+- [Node Architecture](notes/node-architecture.md)
   - [Minimal Sentry Node](notes/minimal-sentry-node.md)
   - [Minimal Sentry Node (Extended)](notes/minimal-sentry-node/README.md)
-- Light Clients & Verification
+  - [Supervisor Layer](notes/supervisor-layer.md)
+  - [Sentinel Middle Layer](notes/sentinel-middle-layer.md)
+  - [Sentinel Finalization Layer](notes/sentinel-finalization-layer.md)
+  - [Pillars](notes/pillars.md)
+- [Light Clients & Verification](notes/light-clients-verification.md)
   - [Momentum Header Verification](notes/momentum-header-verification.md)
   - [SPV Light Verification](notes/spv-light-verification.md)
   - [SPV Light Verification (Extended)](notes/spv-light-verification/README.md)
@@ -23,14 +23,14 @@
   - [Browser Light Client](notes/browser-light-client.md)
   - [Browser Light Client Architecture](notes/browser-light-client-architecture.md)
   - [Browser Light Client (Extended)](notes/browser-light-client/README.md)
-- Data Structures & Commitments
+- [Data Structures & Commitments](notes/data-structures.md)
   - [Account Chain Commitments](notes/account-chain-commitments.md)
   - [Momentum Data Fields](notes/momentum-data-fields.md)
-- Execution Model
+- [Execution Model](notes/execution-model.md)
   - [zApps Draft Notes](notes/zapps-draft-notes.md)
   - [zApps Draft Notes (Extended)](notes/zapps-draft-notes/README.md)
   - [Dynamic Plasma](notes/dynamic-plasma.md)
-- Interoperability
+- [Interoperability](notes/interoperability.md)
   - [Bitcoin SPV Feasibility](notes/bitcoin-spv-feasibility.md)
   - [HTLCs, PTLCs, and Bounded Inclusion](notes/htlc_ptlc_and_bounded_inclusion_comparison.md)
 
